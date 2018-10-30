@@ -1,0 +1,832 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}a{text-decoration:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) {position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(0 0 0 0);overflow: hidden; }
+
+img{max-width: 100%;}
+
+/* Skip Link */
+.skip-link {
+   position: absolute;
+   left: -1000px;
+   text-align: center;
+   z-index: 1500;
+   background: rgba(0,0,0,0.7);
+   color: #fcfcfc;
+   padding: 20px;
+   font-family: 'Lato', sans-serif;
+   text-transform: uppercase;
+}
+
+.skip-link:focus {
+   left: 0;
+}
+
+/* General Styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+   font-size: 1.8rem;
+   color: #1f2022;
+   overflow-x: hidden;
+}
+
+.wrapper {
+   max-width: 1280px;
+   width: 80%;
+   margin: 0 auto;
+}
+
+h2 {
+   font-family: 'Playfair Display', serif;
+   font-size: 4.2rem;
+   margin: 0;
+}
+
+h3 {
+   font-family: 'Playfair Display', serif;
+   font-size: 3.2rem;
+   color: #1f2022;
+}
+
+h4 {
+   font-family: 'Lato', sans-serif;
+   font-size: 2.4rem;
+   text-transform: uppercase;
+   margin: 0;
+}
+
+ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+p {
+   font-family: 'Lato', sans-serif;
+   font-size: 1.8rem;
+   line-height: 2.9rem;
+   margin: 30px 0;
+}
+
+/* HIDDEN HAMBURGER */
+.openNav,
+.mainNav .closeNav,
+.mainNav .hiddenSocial {
+   display: none;
+}
+
+/* BUTTON STYLES */
+
+.button,
+input[type="submit"] {
+   background: #e7a8e6;
+   padding: 17px 30px;
+   font-family: 'lato', sans-serif;
+   font-weight: 700;
+   font-size: 1.8rem;
+   text-transform: uppercase;
+   border: none;
+   color: black;
+   display: block;
+   width: 214px;
+   text-align: center;
+}
+
+.button:hover,
+input:hover[type="submit"] {
+   background: rgb(226, 164, 225);
+   box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.button:active,
+input:active[type="submit"] {
+   background: rgb(209, 152, 209);
+}
+
+/* HEADER STYLES */
+
+header {
+   background: url(../assets/image-1.png) no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   color: #fcfcfc;
+   position: relative;
+}
+
+header a {
+   color: #fcfcfc;
+}
+
+.mainNav a:hover,
+.socialNav a:hover {
+   color: #e7a8e6;
+}
+
+h1 {
+   font-family: 'lato', sans-serif;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 3.2rem;
+   line-height: 0.7;
+   position: absolute;
+   top: 60vh;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   clear: both;
+}
+
+h1 span {
+   font-family: 'Playfair Display', serif;
+   text-transform: none;
+   display: block;
+   font-size: 13rem;
+}
+
+header h2 {
+   display: inline;
+}
+
+.topBar {
+   padding-top: 20px;
+}
+
+.mainNav {
+   font-family: 'Lato', sans-serif;
+   font-size: 1.8rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   float: right;
+   margin-bottom: 244px;
+}
+
+.mainNav li {
+   float: left;
+   padding-right: 34px;
+}
+
+.mainNav li:last-child {
+   padding-right: 0;
+}
+
+.socialWrapper {
+   width: 96%;
+   max-width: 1567px;
+   margin: 0 auto;
+   position: absolute;
+   top: 30vh;
+   left: 0;
+   right: 0;
+}
+
+.socialNav {
+   display: block;
+   float: right;
+   font-size: 1.2rem;
+}
+
+.socialNav li {
+   width: 100px;
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+.socialNav i {
+   font-size: 2rem;
+}
+
+/* ABOUT STYLES */
+
+.about {
+   background: #f0f5ff;
+   padding: 100px 0;
+   text-align: center;
+}
+
+.about p {
+   margin: 30px auto;
+   width: 50%;
+}
+
+.about .buttonContainer {
+   display: inline-block;
+   text-align: center;
+}
+
+/* GALLERY STYLES */
+.gallery {
+   padding: 100px 0;
+}
+
+.galleryContainer {
+   max-width: calc((100% - 80px) / 3);
+   margin-right: 40px;
+   display: block;
+   float: left;
+   line-height: 0;
+}
+
+.galleryContainer:last-child {
+   margin-right: 0;
+}
+
+.galleryContainer:hover {
+   box-shadow: 3px 3px 2px rgba(31,32,34,0.5);
+}
+
+/* ICON NAV STYLES */
+section.iconNav {
+   background: url(../assets/image-5.png) no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 50px 0;
+}
+
+.iconNav ul, 
+.iconNav li {
+   text-align: center;
+   margin: 0;
+}
+
+.iconNav li {
+   display: inline-block;
+   padding: 50px;
+   width: 250px;
+}
+
+.iconNav li:hover a {
+   color: #d8d8d8;
+}
+
+.iconNav a {
+   color: #fcfcfc;
+}
+
+.iconNav i {
+   font-size: 4rem;
+}
+
+.iconNav p {
+   font-size: 3rem;
+   font-family: 'Playfair Display', serif;
+   padding: 23.5px 0 0 0;
+   margin: 0;
+}
+
+/* BEHIND THE LENS STYLES */
+
+.behindTheLens {
+   padding: 100px 0;
+}
+
+.lensImg img {
+   width: calc(30% - 42px);
+   float: left;
+}
+
+.lensContent {
+   max-width: 70%;
+   margin-left: 42px;
+   float: left;
+}
+
+/* BLOG STYLES */
+.blog {
+   background: #f0f5ff;
+}
+
+.blog .container {
+   float: left;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.blogImg {
+   line-height: 0;
+}
+
+.blogImg,
+.blogContent {
+   max-width: 50%;
+}
+
+.blog .nature .blogImg,
+.blog .nature .blogContent {
+   float: right;
+}
+
+.blog .candid .blogImg,
+.blog .candid .blogContent {
+   float: left;
+}
+
+.nature .blogContent {
+   text-align: right; 
+   padding-right: 142px;
+   margin-left: auto;
+   margin-right: 0;
+}
+
+.candid .blogContent {
+   padding-left: 105px;
+}
+
+.blogContent h3 {
+   margin: 100px 0 0 0;
+}
+
+.blogContent p {
+   max-width: 300px;
+}
+
+.blog .button {
+   padding: 17px 15px;
+   width: 160px;
+}
+
+.nature .buttonContainer {
+   display: inline-block;
+}
+
+/* FOOTER STYLES */
+.mobile {
+  display: none;
+}
+
+footer {
+   background: #232323;
+   color: #fcfcfc;
+}
+
+.mainFooter {
+   padding: 100px 0;
+}
+
+footer h4 {
+   margin-bottom: 3px;
+}
+
+footer p {
+   margin: 0;
+}
+
+footer ul {
+   margin: 0;
+}
+
+footer a {
+   color: #fcfcfc;
+   font-family: 'Lato', sans-serif;
+   line-height: 2.9rem;
+   display: block;
+}
+
+footer a:hover {
+   color: #e7a8e6;
+}
+
+.contact,
+.desktop,
+.pages {
+   float: left;
+}
+
+.stayUpdated {
+   margin: 0 140px;
+   text-align: center;
+   width: calc(75% - 280px);
+}
+
+.contact,
+.pages {
+   width: 12.5%;
+}
+
+.stayUpdated form {
+   margin: 10px auto;
+   font-size: 0;
+}
+
+.stayUpdated input {
+   height: 50px;
+   display: inline-block;
+   vertical-align: middle;
+}
+
+input[type="email"] {
+   max-width: 450px;
+   width: 70%;
+   border: none;
+   padding-left: 32.7px;
+   font-size: 1.8rem;
+}
+
+input::placeholder {
+   font-size: 1.8rem;
+   color: #232323;
+}
+
+input[type="submit"] {
+   max-width: 160px;
+   padding: 0;
+}
+
+input:hover[type="submit"] {
+   opacity: 0.95;
+   cursor: pointer;
+}
+
+.pages {
+   text-align: right;
+   text-transform: uppercase;
+}
+
+.bottomBar {
+   clear: both;
+   background: black;
+   opacity: 0.5;
+   text-align: center;
+   padding: 10px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:1600px) {
+   .responsiveWrapper {
+      max-width: 1600px;
+      margin: 0 auto;
+   }
+}
+
+@media (max-width:1500px) {
+
+   /* BLOG */
+   .blogContent h3 {
+      margin: 80px 0 0 0;
+   }
+}
+
+@media (max-width:1420px) {
+   /* BEHIND THE LENS */
+   .behindTheLens img,
+   .lensContent {
+      float: none;
+   }
+
+   .lensImg {
+    text-align: center;
+    margin-bottom: 30px;
+   }
+
+   .lensImg img {
+      width: 40%;
+   }
+   
+   .lensContent {
+      margin: 0;
+      text-align: center;
+      max-width: 100%;
+   }
+
+   .lensContent p {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .lensContent .buttonContainer {
+      display: inline-block;
+   }
+
+   /* BLOG */
+   .blogContent h3 {
+      margin: 60px 0 0 0;
+   }
+}
+
+@media (max-width:1355px) {
+   /* FOOTER */
+   .stayUpdated {
+      margin: 0 25px;
+      width: calc(50% - 50px);
+   }
+
+   .contact, .pages {
+      width: 25%;
+   }
+
+   .stayUpdated input {
+      display: block;
+      width: 100%;
+   }
+
+   input[type="email"] {
+      margin-bottom: 12px;
+      max-width: 100%;
+      text-align: center;
+      padding-left: 0;
+   }
+
+   input[type="submit"] {
+      display: inline-block;
+      max-width: 100%;
+   }
+}
+
+@media(max-width:1200px) {
+   /* ABOUT / BEHIND THE LENS */
+   .about p,
+   .lensContent p {
+      width: 90%;
+   }
+
+    /* BLOG */
+   .blog {
+      padding: 100px 0;
+   }
+    
+    .blog .container {
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+   }
+
+   .blog .nature .blogImg, 
+   .blog .nature .blogContent,
+   .blog .candid .blogImg,
+   .blog .candid .blogContent {
+      float: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+   }
+
+   .blogImg,
+   .blogContent {
+      max-width: 100%;
+   }
+
+   .blogImg img {
+      width: 70%;
+   }
+
+   .blogContent p {
+      max-width: 50%;
+      margin: 30px auto;
+   }
+
+   .responsiveWrapper {
+      max-width: 1200px;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   .blog .candid .blogImg {
+      margin-top: 60px;
+   }
+
+   .buttonContainer {
+      display: inline-block;
+   }
+}
+
+@media(max-width:1015px) {
+    /* WRAPPERS */
+    .wrapper,
+    .responsiveWrapper {
+      width: 90%;
+    }
+
+   /* HAMBURGER MENU */
+   /* Credits for accessible hamburger menu code: Mark Caron. Found at: https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793 */
+   .socialNav {
+      display: none;
+   }
+
+   .openNav,
+   .mainNav .closeNav,
+   .mainNav .hiddenSocial {
+      display: inline-block;
+   }
+
+    .openNav {
+      max-width: 100%;
+      position: absolute;
+      top: 35px;
+      right: 50px;
+   }
+
+   .openNav,
+   .closeNav {
+      font-size: 3rem;
+      color: #fcfcfc;
+   }
+
+   .mainNav {
+      position: absolute;
+      right: -350px;
+      top: 0;
+      height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      transition: left 0.5s ease;
+      z-index: 10;
+      background: #000;
+      padding: 30px;
+   }
+
+   .mainNav ul {
+      min-height: 100%;
+      min-width: 250px;
+   }
+
+   .mainNav ul li {
+      float: none;
+      padding: 25px 0;
+      text-align: center;
+   }
+
+   .mainNav .hiddenSocial {
+      width: 100%;
+   }
+
+   .hiddenSocial i {
+      padding: 0 10px;
+   }
+
+   .mainNav .closeNav {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+   }
+
+   .mainNav:target {
+      right: 0;
+      box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+   }
+
+   .mainNav:target .closeNav {
+      z-index: 15;
+   }
+
+   .mainNav:target ul {
+      position: relative;
+      z-index: 11;
+   }
+   
+   /* ICON NAV */
+   section.iconNav {
+     background: #1f2022;
+   }
+
+   .iconNav li {
+     padding: 25px;
+     width: 350px;
+   }
+
+   .iconNav li:hover a {
+     color: #e7a8e6;
+   }
+
+   /* BLOG */
+   .blogImg img {
+      width: 90%;
+   }
+
+   .blogContent p {
+      max-width: 70%;
+   }
+
+   /* BEHIND THE LENS */
+   .lensImg img {
+      width: 50%;
+   }
+
+}
+
+@media(max-width:946px) {
+  /* GALLERY */
+   .galleryContainer:last-child {
+     display: none;
+   }
+
+   .galleryContainer {
+     max-width: calc(50% - 20px);
+   }
+
+   .galleryContainer:nth-child(2) {
+     margin-right: 0;
+   }
+
+    /* FOOTER */
+   .mobile {
+     display: block;
+     min-width: 100%;
+     margin-bottom: 30px;
+   }
+
+   .desktop {
+     display: none;
+   }
+
+   .contact, 
+   .pages {
+     text-align: center;
+     width: 50%;
+   }
+
+   .mobile {
+     margin: 0 0 30px 0;
+   }
+}
+
+@media(max-width:791px) {
+  /* PADDING ON SECTIONS */
+    .about,
+    .gallery,
+    .iconNav,
+    .behindTheLens,
+    .blog,
+    .mainFooter {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+}
+
+@media(max-width:678px) {
+  /* HEADER */
+   h1 {
+     font-size: 2.2rem;
+   }
+
+   h1 span {
+     font-size: 10rem;
+   }
+
+  /* GALLERY */
+   .galleryContainer {
+     max-width: 50%;
+     margin: 0;
+   }
+   
+   .gallery {
+     padding: 0;
+     margin: 0;
+   }
+
+   .gallery.wrapper {
+     width: 100%;
+   }
+
+   /* BEHIND THE LENS */
+   .lensImg img {
+      width: 95%;
+   }
+
+   /* BLOG */
+   .blogImg img {
+     width: 100%;
+   }
+
+   .responsiveWrapper {
+     max-width: 600px;
+     width: 100%;
+   }
+}
+
+@media(max-width:601px) {
+  /* HEADER */
+   header h2 {
+     font-size: 3rem;
+   }
+
+   .openNav {
+     top: 20px;
+     right: 30px;
+   }
+
+  /* BLOG */
+   .blog {
+     padding-top: 0;
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
