@@ -10,15 +10,15 @@ img{max-width: 100%;}
 
 /* Skip Link */
 .skip-link {
+   font-family: 'Lato', sans-serif;
+   text-transform: uppercase;
+   text-align: center;
+   color: #fcfcfc;
    position: absolute;
    left: -1000px;
    z-index: 1500;
    padding: 20px;
    background: rgba(0,0,0,0.7);
-   font-family: 'Lato', sans-serif;
-   text-transform: uppercase;
-   text-align: center;
-   color: #fcfcfc;
 }
 
 .skip-link:focus {
@@ -826,14 +826,18 @@ input:hover[type="submit"] {
    .blog {
      padding-top: 0;
    }
-
 }
 
+@media(max-width:375px) {
+  /* HEADER */
+   h1 {
+     font-size: 2rem;
+   }
 
-
-
-
-
+   h1 span {
+     font-size: 8rem;
+   }
+}
 
 
 
