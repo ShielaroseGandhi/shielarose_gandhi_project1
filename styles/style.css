@@ -10,15 +10,16 @@ img{max-width: 100%;}
 
 /* Skip Link */
 .skip-link {
-   font-family: 'Lato', sans-serif;
-   text-transform: uppercase;
-   text-align: center;
-   color: #fcfcfc;
    position: absolute;
    left: -1000px;
    z-index: 1500;
    padding: 20px;
    background: rgba(0,0,0,0.7);
+   font-family: 'Lato', sans-serif;
+   text-transform: uppercase;
+   text-align: center;
+   color: #fcfcfc;
+   
 }
 
 .skip-link:focus {
@@ -42,23 +43,30 @@ body {
    margin: 0 auto;
 }
 
-h2 {
+h1 span, h2, h3 {
    font-family: 'Playfair Display', serif;
+}
+
+h1, h4, p, .mainNav {
+   font-family: 'Lato', sans-serif;
+}
+
+h2, h4 {
+  margin: 0
+}
+
+h2 {
    font-size: 4.2rem;
-   margin: 0;
 }
 
 h3 {
-   font-family: 'Playfair Display', serif;
    font-size: 3.2rem;
    color: #1f2022;
 }
 
 h4 {
-   font-family: 'Lato', sans-serif;
    font-size: 2.4rem;
    text-transform: uppercase;
-   margin: 0;
 }
 
 ul {
@@ -67,7 +75,6 @@ ul {
 }
 
 p {
-   font-family: 'Lato', sans-serif;
    font-size: 1.8rem;
    line-height: 2.9rem;
    margin: 30px 0;
@@ -84,17 +91,17 @@ p {
 
 .button,
 input[type="submit"] {
-   background: #e7a8e6;
-   padding: 17px 30px;
    font-family: 'lato', sans-serif;
    font-weight: 700;
    font-size: 1.8rem;
    text-transform: uppercase;
+   text-align: center;
+   background: #e7a8e6;
+   padding: 17px 30px;
    border: none;
    color: black;
    display: block;
    width: 214px;
-   text-align: center;
 }
 
 .button:hover,
@@ -111,12 +118,12 @@ input:active[type="submit"] {
 /* HEADER STYLES */
 
 header {
+   position: relative;
    background: url(../assets/image-1.png) no-repeat;
    background-size: cover;
    background-position: center;
    height: 100vh;
    color: #fcfcfc;
-   position: relative;
 }
 
 header a {
@@ -129,23 +136,21 @@ header a {
 }
 
 h1 {
-   font-family: 'lato', sans-serif;
-   text-transform: uppercase;
-   text-align: center;
-   font-size: 3.2rem;
-   line-height: 0.7;
    position: absolute;
    top: 60vh;
    left: 0;
    right: 0;
    bottom: 0;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 3.2rem;
+   line-height: 0.7;
    clear: both;
 }
 
 h1 span {
-   font-family: 'Playfair Display', serif;
-   text-transform: none;
    display: block;
+   text-transform: none;
    font-size: 13rem;
 }
 
@@ -158,11 +163,10 @@ header h2 {
 }
 
 .mainNav {
-   font-family: 'Lato', sans-serif;
+   float: right;
    font-size: 1.8rem;
    font-weight: 700;
    text-transform: uppercase;
-   float: right;
    margin-bottom: 244px;
 }
 
@@ -176,13 +180,13 @@ header h2 {
 }
 
 .socialWrapper {
-   width: 96%;
-   max-width: 1567px;
-   margin: 0 auto;
    position: absolute;
    top: 30vh;
    left: 0;
    right: 0;
+   max-width: 1567px;
+   width: 96%;
+   margin: 0 auto;
 }
 
 .socialNav {
@@ -210,8 +214,8 @@ header h2 {
 }
 
 .about p {
-   margin: 30px auto;
    width: 50%;
+   margin: 30px auto;
 }
 
 .about .buttonContainer {
@@ -242,9 +246,7 @@ header h2 {
 
 /* ICON NAV STYLES */
 section.iconNav {
-   background: url(../assets/image-5.png) no-repeat;
-   background-size: cover;
-   background-position: center;
+   background: url(../assets/image-5.png) center/cover no-repeat;
    padding: 50px 0;
 }
 
@@ -273,14 +275,13 @@ section.iconNav {
 }
 
 .iconNav p {
-   font-size: 3rem;
    font-family: 'Playfair Display', serif;
+   font-size: 3rem;
    padding: 23.5px 0 0 0;
    margin: 0;
 }
 
 /* BEHIND THE LENS STYLES */
-
 .behindTheLens {
    padding: 100px 0;
 }
@@ -355,6 +356,7 @@ section.iconNav {
 }
 
 /* FOOTER STYLES */
+/* Hide mobile form */
 .mobile {
   display: none;
 }
@@ -372,17 +374,14 @@ footer h4 {
    margin-bottom: 3px;
 }
 
-footer p {
-   margin: 0;
-}
-
+footer p,
 footer ul {
    margin: 0;
 }
 
 footer a {
-   color: #fcfcfc;
    font-family: 'Lato', sans-serif;
+   color: #fcfcfc;
    line-height: 2.9rem;
    display: block;
 }
@@ -398,9 +397,9 @@ footer a:hover {
 }
 
 .stayUpdated {
-   margin: 0 140px;
-   text-align: center;
    width: calc(75% - 280px);
+   text-align: center;
+   margin: 0 140px;
 }
 
 .contact,
@@ -409,8 +408,8 @@ footer a:hover {
 }
 
 .stayUpdated form {
-   margin: 10px auto;
-   font-size: 0;
+  margin: 10px auto;
+  font-size: 0;
 }
 
 .stayUpdated input {
@@ -464,7 +463,6 @@ input:hover[type="submit"] {
 }
 
 /* MEDIA QUERIES */
-
 @media (min-width:1600px) {
    .responsiveWrapper {
       max-width: 1600px;
@@ -473,58 +471,55 @@ input:hover[type="submit"] {
 }
 
 @media (max-width:1500px) {
-
    /* BLOG */
    .blogContent h3 {
       margin: 80px 0 0 0;
    }
 }
 
-@media (max-width:1420px) {
-   /* BEHIND THE LENS */
+@media (max-width:1355px) {
+  /* BEHIND THE LENS */
    .behindTheLens img,
    .lensContent {
       float: none;
    }
-
+  
    .lensImg {
-    text-align: center;
-    margin-bottom: 30px;
+      text-align: center;
+      margin-bottom: 30px;
    }
-
+  
    .lensImg img {
       width: 40%;
    }
-   
+  
    .lensContent {
       margin: 0;
       text-align: center;
       max-width: 100%;
    }
-
+  
    .lensContent p {
       width: 70%;
       margin-left: auto;
       margin-right: auto;
    }
-
+  
    .lensContent .buttonContainer {
       display: inline-block;
    }
 
-   /* BLOG */
+  /* BLOG */
    .blogContent h3 {
       margin: 60px 0 0 0;
    }
-}
 
-@media (max-width:1355px) {
-   /* FOOTER */
+  /* FOOTER */
    .stayUpdated {
       margin: 0 25px;
       width: calc(50% - 50px);
    }
-
+  
    .contact, .pages {
       width: 25%;
    }
@@ -590,19 +585,18 @@ input:hover[type="submit"] {
    /* FOOTER */
    .stayUpdated input {
       display: block;
+      max-width: 100%;
       width: 100%;
    }
 
    input[type="email"] {
       margin-bottom: 12px;
-      max-width: 100%;
       text-align: center;
       padding-left: 0;
    }
 
    input[type="submit"] {
       display: inline-block;
-      max-width: 100%;
    }
 }
 
@@ -625,11 +619,11 @@ input:hover[type="submit"] {
       display: inline-block;
    }
 
-    .openNav {
-      max-width: 100%;
+   .openNav {
       position: absolute;
       top: 35px;
       right: 50px;
+      max-width: 100%;
    }
 
    .openNav,
@@ -645,14 +639,14 @@ input:hover[type="submit"] {
       height: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
-      transition: left 0.5s ease;
       z-index: 10;
       background: #000;
+      font-size: 2.5rem;
       padding: 30px;
    }
 
    .mainNav ul {
-      min-height: 100%;
+     min-height: 100%;
       min-width: 250px;
    }
 
@@ -679,15 +673,6 @@ input:hover[type="submit"] {
    .mainNav:target {
       right: 0;
       box-shadow: -10px 0 20px rgba(0,0,0,0.5);
-   }
-
-   .mainNav:target .closeNav {
-      z-index: 15;
-   }
-
-   .mainNav:target ul {
-      position: relative;
-      z-index: 11;
    }
    
    /* ICON NAV */
@@ -723,36 +708,36 @@ input:hover[type="submit"] {
 @media(max-width:946px) {
   /* GALLERY */
    .galleryContainer:last-child {
-     display: none;
+      display: none;
    }
 
    .galleryContainer {
-     max-width: calc(50% - 20px);
+      max-width: calc(50% - 20px);
    }
 
    .galleryContainer:nth-child(2) {
-     margin-right: 0;
+      margin-right: 0;
    }
 
     /* FOOTER */
    .mobile {
-     display: block;
-     min-width: 100%;
-     margin-bottom: 30px;
+      display: block;
+      min-width: 100%;
+      margin-bottom: 30px;
    }
 
    .desktop {
-     display: none;
+      display: none;
    }
 
    .contact, 
    .pages {
-     text-align: center;
-     width: 50%;
+      text-align: center;
+      width: 50%;
    }
 
    .mobile {
-     margin: 0 0 30px 0;
+      margin: 0 0 30px 0;
    }
 }
 
@@ -767,32 +752,33 @@ input:hover[type="submit"] {
       padding-top: 50px;
       padding-bottom: 50px;
     }
-
 }
 
 @media(max-width:678px) {
   /* HEADER */
    h1 {
-     font-size: 2.2rem;
+      font-size: 2.2rem;
    }
 
    h1 span {
-     font-size: 10rem;
+      font-size: 10rem;
    }
 
   /* GALLERY */
+   .galleryContainer,
+   .gallery {
+      margin: 0;
+   }
    .galleryContainer {
-     max-width: 50%;
-     margin: 0;
+      max-width: 50%;
    }
    
    .gallery {
-     padding: 0;
-     margin: 0;
+      padding: 0;
    }
 
    .gallery.wrapper {
-     width: 100%;
+      width: 100%;
    }
 
    /* BEHIND THE LENS */
